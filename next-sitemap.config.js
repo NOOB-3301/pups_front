@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://yourdomain.com',
+    siteUrl: 'https://pups-staging.vercel.app',
     generateRobotsTxt: true,
   };
