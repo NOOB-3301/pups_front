@@ -6,7 +6,8 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.9.1",
@@ -14,6 +15,7 @@
     "@tsparticles/slim": "^3.9.1",
     "lucide-react": "^0.553.0",
     "next": "^16.0.8",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsparticles": "^3.9.1"
