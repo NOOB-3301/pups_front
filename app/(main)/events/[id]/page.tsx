@@ -1,13 +1,15 @@
 "use client";
 import React, { useState } from "react";
+import { useParams } from "next/navigation";
 import events from "../../../../data/events.json";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-type Props = { params: { id: string } };
+export default function EventDetail() {
+  const params = useParams();
+  const id = params?.id as string;
 
-export default function EventDetail({ params }: Props) {
-  const ev = events.find((e) => String(e.id) === params.id);
+  const ev = events.find((e) => String(e.id) === id);
   if (!ev) return notFound();
 
   const [imgSrc, setImgSrc] = useState(ev.poster || "/placeholders/default.jpg");
